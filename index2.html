@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Auto Instrucional</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/cascadestylesheet.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<script type="text/javascript" src="js/javascript.js" charset="ISO-8859-1">
+		
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<button type="button" onclick="validarMultiplicacaoMensagemCriptografadaChave('29 14 81 33', '3 1 2 1');">Validar se a Matriz Mensagem pode ser Multiplicada pela Matriz Chave</button>
+			<br>
+			<button type="button" onclick="conversaoMensagemMatriz('29 14 81 33');">Converter Vetor de Caracteres da Mensagem Codificada em uma Matriz Quadrada</button>
+			<br>
+			<button type="button" onclick="conversaoChaveMatriz('3 1 2 1');">Converter Vetor de Caracteres da Chave Codificada em uma Matriz Quadrada</button>
+			<br>
+			<button type="button" onclick="calcularChaveInversa([[3, 1], [2, 1]]);">Calcular Chave Inversa</button>
+			<!-- <button type="button" onclick="calcularChaveInversa([[8, -1, -3], [-5, 1, 2], [10, -1, -4]]);">Calcular Chave Inversa</button> -->
+			<!-- <button type="button" onclick="calcularChaveInversa([[2, -3, 1], [0, 2, 3], [5, 1, -5]]);">Calcular Chave Inversa</button> -->
+			<!-- <button type="button" onclick="calcularChaveInversa([[1, 2, 5, 3, 2], [1, 3, 7, 3, 4], [0, 5, 2, 2, 1], [1, 3, 0, 1, 2], [0, 6, 7, 4, 7]]);">Calcular Chave Inversa</button> -->
+			<br>
+			<button type="button" onclick="calcularMatrizMensagem([[29, 14], [81, 33]], [[1, -1], [-2, 3]]);">Calcular Matriz Mensagem</button>
+			<br>
+			<button type="button" onclick="converterMatrizMensagem([[1, 13], [15, 18]]);">Converter a Matriz Mensagem em um Vetor de Caracteres</button>
+			<br><br>
+
+			<button type="button" onclick="descriptografar();">Descriptografar</button>
+		</div>
+	</body>
+</html>

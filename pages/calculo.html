@@ -1,0 +1,116 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Auto Instrucional</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/cascadestylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<script type="text/javascript" src="../js/javascript.js" charset="ISO-8859-1"></script>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="../index.html">Criptografia</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="../index.html">História<span class="sr-only">(current)</span></a></li>
+							<li class="active"><a href="../pages/calculo.html">Cálculo</a></li>
+						</ul>				
+					</div>
+				</div>
+			</nav>
+			<div class="row">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
+					<h2 class="h2"><b>Criptografia</b></h2>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
+					<hr>
+					<form>
+						<div class="form-group">
+							<label class="control-label" for="mensagem-criptografada">Mensagem: </label>
+							<input type="text" class="form-control" id="mensagem-criptografada" placeholder="Insira a mensagem criptografada separando por espaços cada elemento (ex.: 29 14 81 33)">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="chave-mensagem">Chave: </label>
+							<input type="text" class="form-control" id="chave-mensagem" placeholder="Insira a chave para descriptografar separando por espaços cada elemento (ex.: 3 1 2 1)">
+						</div>
+						<div class="form-group"> 
+							<button type="button" class="btn btn-success" onclick="descriptografar(document.getElementById('mensagem-criptografada').value, document.getElementById('chave-mensagem').value);">Descriptografar</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
+					<fieldset>
+						<legend>Mensagem Descriptografada</legend>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="alert" id="alert" style="display: none;" value="">
+									<div id="div-resultado">
+									</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
+					Assim para criptografar, o remetente vai utilizar a matriz Chave <b><i>C</i></b> para codificar a mensagem e o destinatário vai utilizar a matriz <b><i>C</i></b>^(-<b><i>1</i></b>) para decodificá-la inicialmente a mensagem <b><i>M</i></b> chega ao destinatário na forma codificada numérica. Assim transformamos essa mensagem codificada em uma matriz e com base na matriz <b><i>C</i></b> Chave do código dada, determinaremos a sua inversa <b><i>C</i></b>^(-<b><i>1</i></b>)
+					<br>
+					<br>
+					
+					E para a decodificaremos da mensagem, utilizaremos a seguinte fórmula:
+					<div class="row text-center">
+						(<b><i>MxC</i></b>)<b><i>xC</i></b>^(-<b><i>1</i></b>)= <b><i>M</i></b>
+					</div>
+					<div >Onde:</div>	
+					<div>
+						(<b><i>MxC</i></b>) é a matriz Codificada
+					</div>
+					<div>
+						<b><i>C</i></b> é a matriz Chave para o Código
+					</div>
+					<div>
+						<b><i>C</i></b>^(-<b><i>1</i></b>) é a matriz Inversa do Código
+					</div>	
+					<div>
+						<b><i>M</i></b> é a matriz da Mensagem
+					</div>
+					<br>
+					Após a decodificação, encontraremos uma matriz numérica (Mensagem), e teremos que convertê-la para a forma alfabética. Utilizaremos uma tabela para fazer as respectivas conversões de números em letras, confrome as associações a seguir:
+					<div>
+						<img src="../img/tabela.jpg">
+					</div>
+					O Espaçamento entra as palavras será representado pelo símbolo #.
+					<br>
+					<br>
+					O remetente e o destinatario devem conhecer essa tabela "alfa numerica", ou se for o caso, poderão criar uma nova tabela utilizando outras correspondências entrar números e letras.
+					<hr>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
